@@ -1,6 +1,6 @@
 {
-    "name": "Jonathan's Blog",
-    "short_name": "Jonathan's Blog",
+    "name": "ngx-toastr Bootstrap 5 Example",
+    "short_name": "ngx-toastr Bootstrap 5",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -23,6 +23,6 @@
     "background_color": "#ffffff",
     "display": "standalone",
     "start_url": "/",
-    "url": "https://jonathanpeterson.com/",
+    "url": "https://eonasdan.github.io/toastr-bootstrap-5/",
     "scope": "/"
 }
