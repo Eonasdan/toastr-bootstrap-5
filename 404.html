@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="en"><head><base href="/toastr-bootstrap-5/">
+  <meta charset="UTF-8">
+  <meta name="description" content="An example using ngt-toastr and confirmation modals with Bootstrap 5">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>ngx-toastr Bootstrap 5 Example</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <!--<link rel="manifest" href="/site.webmanifest">-->
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta class="metaTitle" name="title" content="ngx-toastr Bootstrap 5 Example">
+  <meta class="metaDescription" name="description" content="An example using ngt-toastr and confirmation modals with Bootstrap 5">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta class="metaUrl" property="og:url" content="https://eonasdan.github.io/toastr-bootstrap-5/">
+  <meta class="metaTitle" property="og:title" content="ngx-toastr Bootstrap 5 Example">
+  <meta class="metaDescription" property="og:description" content="An example using ngt-toastr and confirmation modals with Bootstrap 5">
+  <meta class="metaImage" property="og:image" content="">
+
+  <meta class="metaPublishedTime" property="article:published_time" content="">
+  <meta class="metaModifiedTime" property="article:modified_time" content="">
+  <meta class="metaTag" property="article:tag" content="">
+  <meta property="article:author" content="Jonathan Peterson">
+  <meta property="article:section" content="Technology">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:site" content="@eonasdan">
+  <meta property="twitter:creator" content="@eonasdan">
+  <meta class="metaUrl" property="twitter:url" content="https://eonasdan.github.io/toastr-bootstrap-5/">
+  <meta class="metaTitle" property="twitter:title" content="">
+  <meta class="metaDescription" property="twitter:description" content="An example using ngt-toastr and confirmation modals with Bootstrap 5">
+  <meta class="metaImage" property="twitter:image" content="">
+
+<style>@charset "UTF-8";@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900);:root{--bs-blue:#0d6efd;--bs-indigo:#6610f2;--bs-purple:#6f42c1;--bs-pink:#d63384;--bs-red:#dc3545;--bs-orange:#fd7e14;--bs-yellow:#ffc107;--bs-green:#198754;--bs-teal:#20c997;--bs-cyan:#0dcaf0;--bs-white:#fff;--bs-gray:#6c757d;--bs-gray-dark:#343a40;--bs-gray-100:#f8f9fa;--bs-gray-200:#e9ecef;--bs-gray-300:#dee2e6;--bs-gray-400:#ced4da;--bs-gray-500:#adb5bd;--bs-gray-600:#6c757d;--bs-gray-700:#495057;--bs-gray-800:#343a40;--bs-gray-900:#212529;--bs-primary:#0d6efd;--bs-secondary:#6c757d;--bs-success:#198754;--bs-info:#0dcaf0;--bs-warning:#ffc107;--bs-danger:#dc3545;--bs-light:#f8f9fa;--bs-dark:#212529;--bs-primary-rgb:13,110,253;--bs-secondary-rgb:108,117,125;--bs-success-rgb:25,135,84;--bs-info-rgb:13,202,240;--bs-warning-rgb:255,193,7;--bs-danger-rgb:220,53,69;--bs-light-rgb:248,249,250;--bs-dark-rgb:33,37,41;--bs-white-rgb:255,255,255;--bs-black-rgb:0,0,0;--bs-body-color-rgb:33,37,41;--bs-body-bg-rgb:255,255,255;--bs-font-sans-serif:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--bs-font-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;--bs-gradient:linear-gradient(180deg,#ffffff26,#fff0);--bs-body-font-family:var(--bs-font-sans-serif);--bs-body-font-size:1rem;--bs-body-font-weight:400;--bs-body-line-height:1.5;--bs-body-color:#212529;--bs-body-bg:#fff;}*,:after,:before{box-sizing:border-box;}@media (prefers-reduced-motion: no-preference){:root{scroll-behavior:smooth;}}body{margin:0;font-family:var(--bs-body-font-family);font-size:var(--bs-body-font-size);font-weight:var(--bs-body-font-weight);line-height:var(--bs-body-line-height);color:var(--bs-body-color);text-align:var(--bs-body-text-align);background-color:var(--bs-body-bg);-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0);}a{color:#0d6efd;text-decoration:underline;}a:hover{color:#0a58ca;}.container{width:100%;padding-right:var(--bs-gutter-x,.75rem);padding-left:var(--bs-gutter-x,.75rem);margin-right:auto;margin-left:auto;}@media (min-width: 576px){.container{max-width:540px;}}@media (min-width: 768px){.container{max-width:720px;}}@media (min-width: 992px){.container{max-width:960px;}}@media (min-width: 1200px){.container{max-width:1140px;}}@media (min-width: 1400px){.container{max-width:1320px;}}.navbar{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding-top:.5rem;padding-bottom:.5rem;}.navbar>.container{display:flex;flex-wrap:inherit;align-items:center;justify-content:space-between;}.navbar-brand{padding-top:.3125rem;padding-bottom:.3125rem;margin-right:1rem;font-size:1.25rem;text-decoration:none;white-space:nowrap;}@media (min-width: 992px){.navbar-expand-lg{flex-wrap:nowrap;justify-content:flex-start;}}.navbar-dark .navbar-brand,.navbar-dark .navbar-brand:focus,.navbar-dark .navbar-brand:hover{color:#fff;}.d-flex{display:flex!important;}.justify-content-end{justify-content:flex-end!important;}.align-items-center{align-items:center!important;}.bg-dark{--bs-bg-opacity:1;background-color:rgba(var(--bs-dark-rgb),var(--bs-bg-opacity))!important;}:root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#78d5ef;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;}body{font-family:Roboto,sans-serif;font-size:16px;}a{transition-duration:.5s;text-decoration:none;outline:0 solid #0000;color:#4db2ff;font-weight:500;font-size:14px;}a:focus,a:hover{color:#0091ff;}.ftco-navbar-light{background:#0000!important;position:absolute;right:0;left:0;z-index:3;top:10px;}.ftco-navbar-light .navbar-brand{color:#fff;}.ftco-navbar-light .top-social-info a{color:#6c757d;display:inline-block;padding:0 8px;}.ftco-navbar-light .top-social-info a:focus,.ftco-navbar-light .top-social-info a:hover{color:#0091ff;}.ftco-navbar-light.scrolled{position:fixed;right:0;left:0;top:0;margin-top:-130px;background:#1b1b1b!important;box-shadow:0 0 10px 0 #0000001a;}.ftco-navbar-light.scrolled .navbar-brand{color:#fff;}.ftco-navbar-light.scrolled.awake{margin-top:0;transition:all .3s ease-out;}@media (max-width: 991.98px){.ftco-navbar-light{background:#000!important;top:0;position:relative;}}@media (min-width: 768px){.ftco-navbar-light .navbar-brand{color:#fff;}}.top-search-area{position:relative;z-index:1;}</style><link rel="stylesheet" href="styles.7d18faaf9acd82b85225.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.7d18faaf9acd82b85225.css"></noscript></head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark ftco-navbar bg-dark ftco-navbar-light scrolled awake" id="ftco-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">ngx-toastr Bootstrap 5 Example</a>
+    <div class="top-meta-data d-flex align-items-center justify-content-end">
+      <div class="top-social-info">
+        <a href="http://twitter.eonasdan.com/" target="_blank" rel="noopener" title="Find me on Twitter">
+          <i class="fab fa-twitter fa-2x"></i>
+        </a>
+        <a href="http://github.eonasdan.com/" target="_blank" rel="noopener" title="Find me on GitHub">
+          <i class="fab fa-github fa-2x"></i>
+        </a>
+        <a href="http://twitch.eonasdan.com/" target="_blank" rel="noopener" title="Find me on Twitch">
+          <i class="fab fa-twitch fa-2x"></i>
+        </a>
+      </div>
+      <div class="top-search-area">
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="mainContent mb-3">
+  <app-root></app-root>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/regular.min.js" integrity="sha512-KCmp/CWP6HlqzQKsFeYpN2NwNzVOLyYKscxXcJiocH28Wnyu0i63FKUv5DMRr0dTbyFbks+GvZMrme3lAFwBxQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/brands.min.js" integrity="sha512-8Jp5PI7qKEn304XONokQQRgiu/1P9kTBlvpLc7zRukkTBYGKt6z4CkwJUJhCwwWYnjSdxJcGqW9ifT7ZxPNgbg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/fontawesome.min.js" integrity="sha512-ywaT8M9b+VnJ+jNG14UgRaKg+gf8yVBisU2ce+YJrlWwZa9BaZAE5GK5Yd7CBcP6UXoAnziRQl40/u/qwVZi4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://storage.ko-fi.com/cdn/scripts/overlay-widget.js"></script>
+<script defer>
+  kofiWidgetOverlay.draw('eonasdan', {
+    'type': 'floating-chat',
+    'floating-chat.donateButton.text': 'Support me',
+    'floating-chat.donateButton.background-color': '#323842',
+    'floating-chat.donateButton.text-color': '#fff'
+  });
+</script>
+<!--<script src="https://khan.github.io/tota11y/dist/tota11y.min.js"></script>-->
+<script src="runtime.9fee2f41e26e58ac6781.js" defer></script><script src="polyfills.c37d31d8c182d336e327.js" defer></script><script src="main.acf08aea636ea3bc0196.js" defer></script>
+
+</body></html>
