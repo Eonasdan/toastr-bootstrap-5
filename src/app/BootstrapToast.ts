@@ -26,7 +26,7 @@ import {BootstrapContextEnum} from './bootstrap-context-enum';
         </div>
         <button
           type="button"
-          class="btn-close btn-close-white me-2 m-auto"
+          class="btn-close me-2 m-auto"
           data-bs-dismiss="toast"
           aria-label="Close"
           *ngIf="options.closeButton"
